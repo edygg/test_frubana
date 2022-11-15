@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:15.1
+    volumes:
+      - ./data:/data
+      - pg_data:/var/lib/postgresql/data:Z
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: K2tinVstcd4WY5
+      POSTGRES_USER: demo
+      POSTGRES_DB: demo
+
+volumes:
+  pg_data: {}
